@@ -59,7 +59,8 @@ div.table-container {
 }
 
 img.city-foto {
-  width: 75%;
+  width: 50%;
+  min-width: 300px;
 }
 
 img.plane {
