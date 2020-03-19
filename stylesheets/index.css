@@ -58,6 +58,20 @@ div.table-container {
   margin: auto;
 }
 
+section.city-section {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: auto;
+  padding: 10px;
+}
+
+section.city-section>aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 img.city-foto {
   width: 50%;
   min-width: 300px;
