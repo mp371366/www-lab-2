@@ -4,123 +4,165 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Fligths</title>
+  <title>MEMUW Fligths</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/index.css">
 </head>
 
 <body>
-  <aside class="menu">
-    <h1>Menu</h1>
-    <ul>
-      <li><a href="./index.html">Main page</a></li>
-      <li><a href="https://youtube.com">Watch us</a></li>
-      <li><a href="https://facebook.com">Follow us</a></li>
-      <li><a href="#flights">Fligths</a></li>
-      <li><a href="#delayed">Delayed flights</a></li>
-      <li>
-        <h2>Near departures</h2>
-        <ul>
-          <li><a href="./flights/index.html">Warsaw-London at 10:30AM</a></li>
-          <li><a href="./flights/index.html">Warsaw-London at 11:30AM</a></li>
-          <li><a href="./flights/index.html">Warsaw-London at 12:30AM</a></li>
-        </ul>
-      </li>
-    </ul>
-  </aside>
-  <h1>Fligths</h1>
-  <nav>
-    <a href="./index.html">
-      <img id="logo" src="./images/logo.webp" alt="logo" />
-    </a>
-  </nav>
-  <table id="flights">
-    <thead>
-      <th>Nr</th>
-      <th>Departure</th>
-      <th>Arrive</th>
-      <th>Date</th>
-      <th>Hour</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a href="./flights/index.html">1</a></td>
-        <td>Warsaw</td>
-        <td>London</td>
-        <td>2020-03-10</td>
-        <td>10:30AM</td>
-      </tr>
-      <tr>
-        <td><a href="./flights/index.html">2</a></td>
-        <td>London</td>
-        <td>Warsaw</td>
-        <td>2020-03-10</td>
-        <td>3:30PM</td>
-      </tr>
-      <tr>
-        <td><a href="./flights/index.html">3</a></td>
-        <td>Warsaw</td>
-        <td>London</td>
-        <td>2020-03-10</td>
-        <td>4:30PM</td>
-      </tr>
-      <tr>
-        <td><a href="./flights/index.html">3</a></td>
-        <td>Warsaw</td>
-        <td>London</td>
-        <td>2020-03-10</td>
-        <td>4:30PM</td>
-      </tr>
-      <tr>
-        <td><a href="./flights/index.html">3</a></td>
-        <td>Warsaw</td>
-        <td>London</td>
-        <td>2020-03-10</td>
-        <td>4:30PM</td>
-      </tr>
-      <tr>
-        <td><a href="./flights/index.html">3</a></td>
-        <td>Warsaw</td>
-        <td>London</td>
-        <td>2020-03-10</td>
-        <td>4:30PM</td>
-      </tr>
-      <tr>
-        <td><a href="./flights/index.html">3</a></td>
-        <td>Warsaw</td>
-        <td>London</td>
-        <td>2020-03-10</td>
-        <td>4:30PM</td>
-      </tr>
-      <tr>
-        <td><a href="./flights/index.html">3</a></td>
-        <td>Warsaw</td>
-        <td>London</td>
-        <td>2020-03-10</td>
-        <td>4:30PM</td>
-      </tr>
-      <tr>
-        <td><a href="./flights/index.html">3</a></td>
-        <td>Warsaw</td>
-        <td>London</td>
-        <td>2020-03-10</td>
-        <td>4:30PM</td>
-      </tr>
-    </tbody>
-  </table>
-  <section id="delayed">
-    <h2>Delayed fligths</h2>
-    <ul>
-      <li>Warsaw - Berlin, Thu 03/19/20 10:00AM + UTC0, delayed 30 minutes.</li>
-      <li>Berlin - Berlin, Thu 03/19/20 10:00AM + UTC0, delayed 0 minutes.</li>
-      <li>Warsaw - Berlin, Thu 03/19/20 10:00AM + UTC0, delayed -30 minutes.</li>
-      <li>Warsaw - Berlin, Thu 03/21/20 10:00PM + UTC1, delayed 30 minutes.</li>
-      <li>Warsaw - Berlin, Thu 03/20/20 10:00AM + UTC0, delayed 130 minutes.</li>
-    </ul>
-  </section>
-  <footer class="main-footer">
-    Mateusz Pyszczek
-  </footer>
+  <header class="page-header">
+    <nav>
+      <a href="./index.html">
+        <img id="logo" src="./images/logo.webp" alt="logo" />
+      </a>
+    </nav>
+    <h1>MEMUW Fligths</h1>
+  </header>
+  <div class="page-container">
+    <aside class="menu">
+      <h1>Menu</h1>
+      <ul>
+        <li><a href="./index.html">Main page</a></li>
+        <li><a href="https://youtube.com">Watch us</a></li>
+        <li><a href="https://facebook.com">Follow us</a></li>
+        <li><a href="#flights">Fligths</a></li>
+        <li>
+          <h2>Near departures</h2>
+          <ul>
+            <li><a href="./flights/index.html">Warsaw-London at 10:30AM</a></li>
+            <li><a href="./flights/index.html">Warsaw-London at 11:30AM</a></li>
+            <li><a href="./flights/index.html">Warsaw-London at 12:30AM</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    <main class="main-content">
+      <section>
+        <article>
+          <h1>Info</h1>
+          <p>
+            Because of global pandemia many flights may be canceled.
+            We are please all off you for pation and wish you all the best in that time.
+            See you soon!
+          </p>
+        </article>
+        <section id="flights">
+          <h1>Flights table</h1>
+          <table>
+            <thead>
+              <th>Nr</th>
+              <th>Departure</th>
+              <th>Arrive</th>
+              <th>Date</th>
+              <th>Hour</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="./flights/index.html">1</a></td>
+                <td>Warsaw</td>
+                <td>London</td>
+                <td>2020-03-10</td>
+                <td>10:30AM</td>
+              </tr>
+              <tr>
+                <td><a href="./flights/index.html">2</a></td>
+                <td>London</td>
+                <td>Warsaw</td>
+                <td>2020-03-10</td>
+                <td>3:30PM</td>
+              </tr>
+              <tr>
+                <td><a href="./flights/index.html">3</a></td>
+                <td>Warsaw</td>
+                <td>London</td>
+                <td>2020-03-10</td>
+                <td>4:30PM</td>
+              </tr>
+              <tr>
+                <td><a href="./flights/index.html">3</a></td>
+                <td>Warsaw</td>
+                <td>London</td>
+                <td>2020-03-10</td>
+                <td>4:30PM</td>
+              </tr>
+              <tr>
+                <td><a href="./flights/index.html">3</a></td>
+                <td>Warsaw</td>
+                <td>London</td>
+                <td>2020-03-10</td>
+                <td>4:30PM</td>
+              </tr>
+              <tr>
+                <td><a href="./flights/index.html">3</a></td>
+                <td>Warsaw</td>
+                <td>London</td>
+                <td>2020-03-10</td>
+                <td>4:30PM</td>
+              </tr>
+              <tr>
+                <td><a href="./flights/index.html">3</a></td>
+                <td>Warsaw</td>
+                <td>London</td>
+                <td>2020-03-10</td>
+                <td>4:30PM</td>
+              </tr>
+              <tr>
+                <td><a href="./flights/index.html">3</a></td>
+                <td>Warsaw</td>
+                <td>London</td>
+                <td>2020-03-10</td>
+                <td>4:30PM</td>
+              </tr>
+              <tr>
+                <td><a href="./flights/index.html">3</a></td>
+                <td>Warsaw</td>
+                <td>London</td>
+                <td>2020-03-10</td>
+                <td>4:30PM</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+      <footer class="main-footer">
+        Mateusz Pyszczek
+      </footer>
+    </main>
+    <aside class="problems">
+      <h1>Canceled and delayed flights</h1>
+      <ul class="problems-list">
+        <li class="canceled-flight">
+          <b>Moscow - Berlin</b>,
+          <i>Thu 04/19/20 10:00AM</i>,
+          <b>CANCELED</b>
+        </li>
+        <li class="canceled-flight">
+          <b>Warsaw - Moscow</b>,
+          <i>Thu 04/19/20 10:00AM</i>,
+          <b>CANCELED</b>
+        </li>
+        <li class="big-delay-flight">
+          <b>London - Berlin</b>,
+          <i>Thu 03/22/20 10:00AM</i>,
+          120 mins delay
+        </li>
+        <li class="big-delay-flight">
+          <b>Warsaw - London</b>,
+          <i>Thu 03/19/21 10:00AM</i>,
+          320 mins delay
+        </li>
+        <li class="small-delay-flight">
+          <b>Berlin - Warsaw</b>,
+          <i>Thu 03/23/20 10:00AM</i>,
+          30 mins delay
+        </li>
+        <li class="small-delay-flight">
+          <b>Warsaw - Berlin</b>,
+          <i>Thu 04/14/20 10:00AM</i>,
+          20 mins delay
+        </li>
+    </aside>
+  </div>
 </body>
 
 </html>

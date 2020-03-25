@@ -1,6 +1,98 @@
 body {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+header.page-header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 67px;
+  background-color: #18191a;
+  color: #7d7f87;
+}
+
+header.page-header > h1 {
+  margin: 0;
+}
+
+div.page-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+aside.menu {
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  width: 20%;
+  padding-left: 5px;
+  background-color: #1c1e21;
+  color:rgb(138, 141, 145);
+}
+
+aside.menu ul {
+  list-style: none;
+  padding-inline-start: 10px;
+}
+
+aside.menu a:visited, aside.menu a:link {
+  color:rgb(228, 230, 235);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+aside.problems {
+  width: 20%;
+  text-align: left;
+  background-color: mediumaquamarine;
+}
+
+aside.problems>h1 {
+  font-size: 30px;
+  margin: 5px;
+}
+
+aside.problems>ul {
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+aside.problems>ul>li {
+  padding: 5px;
+}
+
+li.canceled-flight {
+  background-color: lightcoral;
+}
+
+li.big-delay-flight {
+  background-color: sandybrown;
+}
+
+li.small-delay-flight {
+  background-color: lightyellow;
+}
+
+main.main-content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 67px);
+  justify-content: space-between;
+}
+
+p {
+  margin: 5% 10%;
+  text-align: left;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 25px;
 }
 
 th {
@@ -92,6 +184,7 @@ footer.main-footer {
   color: green;
   font-family: sans-serif;
   font-size: 30px;
-  width: 50%;
-  margin: 20px auto;
+  width: 100%;
+  margin: 20px 0px 0px 0xp;
+  padding: 5px 0px;
 }
