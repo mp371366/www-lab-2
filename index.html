@@ -26,6 +26,7 @@
         <li><a href="https://youtube.com">Watch us</a></li>
         <li><a href="https://facebook.com">Follow us</a></li>
         <li><a href="#flights">Fligths</a></li>
+        <li><a href="#reservation">Reservation</a></li>
         <li>
           <h2>Near departures</h2>
           <ul>
@@ -122,6 +123,45 @@
               </tr>
             </tbody>
           </table>
+        </section>
+        <section id="reservation" class="flight-reservation">
+          <h1>Flight reservation form</h2>
+            <form>
+              <div>
+                <label for="departure">Departure:</label>
+                <select name="departure" required>
+                  <option value="" selected disabled hidden>Choose departure</option>
+                  <option value="warsaw">Warsaw</option>
+                  <option value="moscow">Moscow</option>
+                  <option value="berlin">Berlin</option>
+                  <option value="london">London</option>
+                </select>
+              </div>
+              <div>
+              <label for="destination">Destination:</label>
+              <select name="destination" required>
+                <option value="" selected disabled hidden>Choose destination</option>
+                <option value="warsaw">Warsaw</option>
+                <option value="moscow">Moscow</option>
+                <option value="berlin">Berlin</option>
+                <option value="london">London</option>
+              </select>
+            </div>
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" name="name" required>
+            </div>
+            <div>
+              <label for="surname">Surname: </label>
+              <input type="text" name="surname" required>
+            </div>
+            <div>
+              <label for="date">Date:</label>
+              <input type="date" name="date" required>
+            </div>
+              <input type="submit" name="Submit">
+              <input type="reset" name="Clear">
+            </form>
         </section>
       </section>
       <footer class="main-footer">

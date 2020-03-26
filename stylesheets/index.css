@@ -188,3 +188,28 @@ footer.main-footer {
   margin: 20px 0px 0px 0xp;
   padding: 5px 0px;
 }
+
+section.flight-reservation {
+  padding: 0% 10%;
+  text-align: center;
+  margin: 20px;
+}
+
+section.flight-reservation div {
+  margin: 10px;
+}
+
+section.flight-reservation select,section.flight-reservation input {
+  width: 50%;
+}
+
+section.flight-reservation input[type=submit], section.flight-reservation input[type=reset] {
+  align-self: flex-end;
+  width: 80px;
+}
+
+section.flight-reservation label {
+  width: 20%;
+  display: inline-block;
+  text-align: right;
+}
