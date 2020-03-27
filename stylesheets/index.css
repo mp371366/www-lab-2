@@ -220,7 +220,7 @@ section.flight-reservation label {
   text-align: right;
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   h1 {
     font-size: 25px;
   }
@@ -266,7 +266,7 @@ section.flight-reservation label {
     ;
   }
   img.city-foto {
-    display: hidden;
+    display: none;
   }
   ul.passengers-list {
     width: 80%;
