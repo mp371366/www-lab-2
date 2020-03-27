@@ -19,7 +19,9 @@ header.page-header>h1 {
 
 div.page-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 aside.menu {
@@ -221,6 +223,30 @@ section.flight-reservation label {
 }
 
 @media screen and (max-width: 700px) {
+  main.main-content {
+    width: 100%;
+  }
+  aside.problems {
+    width: 100%;
+  }
+  img.city-foto {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+  main.main-content {
+    width: 70%;
+  }
+  aside.problems {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  div.page-container {
+    flex-wrap: wrap;
+  }
   h1 {
     font-size: 25px;
   }
@@ -230,11 +256,7 @@ section.flight-reservation label {
   body {
     font-size: 12px;
   }
-  div.page-container {
-    flex-direction: column;
-  }
   aside.menu {
-    text-align: left;
     width: 100%;
     padding-left: 0px;
   }
@@ -242,31 +264,14 @@ section.flight-reservation label {
     display: none;
   }
   aside.menu ul {
-    list-style: none;
     padding-inline-start: 0px;
   }
   aside.menu li {
     display: inline-block;
     padding: 2px;
   }
-  aside.menu a:visited,
-  aside.menu a:link {
-    color: rgb(228, 230, 235);
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  main.main-content {
-    width: 100%;
-  }
   section.flight-reservation {
     padding: 0px;
-  }
-  aside.problems {
-    width: 100%;
-    ;
-  }
-  img.city-foto {
-    display: none;
   }
   ul.passengers-list {
     width: 80%;
@@ -276,5 +281,14 @@ section.flight-reservation label {
   }
   dl.airplane-description-list>dd {
     margin-top: -15px;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 3000px) {
+  body {
+    width: 3000px;
+    margin: auto;
   }
 }
