@@ -145,15 +145,20 @@ section.city-section {
   justify-content: space-between;
   margin: auto;
   padding: 10px;
+  flex-direction: column;
 }
 
-section.city-section>aside {
+section.city-section>div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
 }
 
-img.city-foto {
+div.flight-info {
+  width: 50%;
+}
+
+img.city-photo {
   width: 50%;
   min-width: 300px;
 }
@@ -217,7 +222,7 @@ footer.main-footer {
   font-family: sans-serif;
   font-size: 30px;
   width: 100%;
-  margin: 20px 0px 0px 0xp;
+  margin: 20px 0px 0px 0px;
   padding: 5px 0px;
 }
 
@@ -255,7 +260,7 @@ section.flight-reservation label {
   aside.problems {
     width: 100%;
   }
-  img.city-foto {
+  img.city-photo {
     display: none;
   }
 }
@@ -286,7 +291,7 @@ section.flight-reservation label {
     width: 100%;
     padding-left: 0px;
   }
-  aside.menu h1 {
+  aside.menu h2 {
     display: none;
   }
   aside.menu ul {

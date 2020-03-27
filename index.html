@@ -21,7 +21,7 @@
   <div class="page-container">
     <aside class="menu">
       <section>
-        <h1>Menu</h1>
+        <h2>Menu</h2>
         <ul>
           <li><a href="./index.html">Main page</a></li>
           <li><a href="https://youtube.com">Watch us</a></li>
@@ -31,7 +31,7 @@
         </ul>
       </section>
       <section>
-        <h1>Near departures</h1>
+        <h2>Near departures</h2>
         <ul>
           <li><a href="./flights/index.html">Warsaw-London at 10:30AM</a></li>
           <li><a href="./flights/index.html">Warsaw-London at 11:30AM</a></li>
@@ -40,22 +40,24 @@
       </section>
     </aside>
     <main class="main-content">
-      <section>
+      <div>
         <article>
-          <h1>Info</h1>
+          <h2>Info</h2>
           <p>
             Because of global pandemia many flights may be canceled. We are please all off you for pation and wish you all the best in that time. See you soon!
           </p>
         </article>
         <section id="flights">
-          <h1>Flights table</h1>
+          <h2>Flights table</h2>
           <table>
             <thead>
-              <th>Nr</th>
-              <th>Departure</th>
-              <th>Arrive</th>
-              <th>Date</th>
-              <th>Hour</th>
+              <tr>
+                <th>Nr</th>
+                <th>Departure</th>
+                <th>Arrive</th>
+                <th>Date</th>
+                <th>Hour</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
@@ -125,51 +127,51 @@
           </table>
         </section>
         <section id="reservation" class="flight-reservation">
-          <h1>Flight reservation form</h2>
-            <form>
-              <div>
-                <label for="departure">Departure:</label>
-                <select name="departure" required>
+          <h2>Flight reservation form</h2>
+          <form>
+            <div>
+              <label for="departure">Departure:</label>
+              <select id="departure" name="departure" required>
                   <option value="" selected disabled hidden>Choose departure</option>
                   <option value="warsaw">Warsaw</option>
                   <option value="moscow">Moscow</option>
                   <option value="berlin">Berlin</option>
                   <option value="london">London</option>
                 </select>
-              </div>
-              <div>
-                <label for="destination">Destination:</label>
-                <select name="destination" required>
+            </div>
+            <div>
+              <label for="destination">Destination:</label>
+              <select id="destination" name="destination" required>
                 <option value="" selected disabled hidden>Choose destination</option>
                 <option value="warsaw">Warsaw</option>
                 <option value="moscow">Moscow</option>
                 <option value="berlin">Berlin</option>
                 <option value="london">London</option>
               </select>
-              </div>
-              <div>
-                <label for="name">Name:</label>
-                <input type="text" name="name" required>
-              </div>
-              <div>
-                <label for="surname">Surname: </label>
-                <input type="text" name="surname" required>
-              </div>
-              <div>
-                <label for="date">Date:</label>
-                <input type="date" name="date" required>
-              </div>
-              <input type="submit" name="Submit">
-              <input type="reset" name="Clear">
-            </form>
+            </div>
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+              <label for="surname">Surname: </label>
+              <input type="text" id="surname" name="surname" required>
+            </div>
+            <div>
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <input type="submit" name="Submit">
+            <input type="reset" name="Clear">
+          </form>
         </section>
-      </section>
+      </div>
       <footer class="main-footer">
         Mateusz Pyszczek
       </footer>
     </main>
     <aside class="problems">
-      <h1>Canceled and delayed flights</h1>
+      <h2>Canceled and delayed flights</h2>
       <ul class="problems-list">
         <li class="canceled-flight">
           <b>Moscow - Berlin</b>,
@@ -197,6 +199,7 @@
           <b>Warsaw - Berlin</b>,
           <i>Thu 04/14/20 10:00AM</i>, 20 mins delay
         </li>
+      </ul>
     </aside>
   </div>
 </body>
