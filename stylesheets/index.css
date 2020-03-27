@@ -171,6 +171,7 @@ ul.passengers-list {
 ul.passengers-list>li {
   text-align: left;
   padding: 2px;
+  position: relative;
 }
 
 ul.passengers-list>li:nth-child(even) {
@@ -179,6 +180,21 @@ ul.passengers-list>li:nth-child(even) {
 
 ul.passengers-list>li:nth-child(odd) {
   background-color: #cccccc;
+}
+
+ul.passengers-list>li:hover>span {
+  display: inline;
+}
+
+span.passenger-popup {
+  display: none;
+  background-color: black;
+  color: white;
+  width: 100px;
+  z-index: 1;
+  position: absolute;
+  left: 150px;
+  top: 15px;
 }
 
 dl.airplane-description-list {
