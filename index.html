@@ -20,22 +20,24 @@
   </header>
   <div class="page-container">
     <aside class="menu">
-      <h1>Menu</h1>
-      <ul>
-        <li><a href="./index.html">Main page</a></li>
-        <li><a href="https://youtube.com">Watch us</a></li>
-        <li><a href="https://facebook.com">Follow us</a></li>
-        <li><a href="#flights">Fligths</a></li>
-        <li><a href="#reservation">Reservation</a></li>
-        <li>
-          <h2>Near departures</h2>
-          <ul>
-            <li><a href="./flights/index.html">Warsaw-London at 10:30AM</a></li>
-            <li><a href="./flights/index.html">Warsaw-London at 11:30AM</a></li>
-            <li><a href="./flights/index.html">Warsaw-London at 12:30AM</a></li>
-          </ul>
-        </li>
-      </ul>
+      <section>
+        <h1>Menu</h1>
+        <ul>
+          <li><a href="./index.html">Main page</a></li>
+          <li><a href="https://youtube.com">Watch us</a></li>
+          <li><a href="https://facebook.com">Follow us</a></li>
+          <li><a href="#flights">Fligths</a></li>
+          <li><a href="#reservation">Reservation</a></li>
+        </ul>
+      </section>
+      <section>
+        <h1>Near departures</h1>
+        <ul>
+          <li><a href="./flights/index.html">Warsaw-London at 10:30AM</a></li>
+          <li><a href="./flights/index.html">Warsaw-London at 11:30AM</a></li>
+          <li><a href="./flights/index.html">Warsaw-London at 12:30AM</a></li>
+        </ul>
+      </section>
     </aside>
     <main class="main-content">
       <section>
@@ -136,27 +138,27 @@
                 </select>
               </div>
               <div>
-              <label for="destination">Destination:</label>
-              <select name="destination" required>
+                <label for="destination">Destination:</label>
+                <select name="destination" required>
                 <option value="" selected disabled hidden>Choose destination</option>
                 <option value="warsaw">Warsaw</option>
                 <option value="moscow">Moscow</option>
                 <option value="berlin">Berlin</option>
                 <option value="london">London</option>
               </select>
-            </div>
-            <div>
-              <label for="name">Name:</label>
-              <input type="text" name="name" required>
-            </div>
-            <div>
-              <label for="surname">Surname: </label>
-              <input type="text" name="surname" required>
-            </div>
-            <div>
-              <label for="date">Date:</label>
-              <input type="date" name="date" required>
-            </div>
+              </div>
+              <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+              </div>
+              <div>
+                <label for="surname">Surname: </label>
+                <input type="text" name="surname" required>
+              </div>
+              <div>
+                <label for="date">Date:</label>
+                <input type="date" name="date" required>
+              </div>
               <input type="submit" name="Submit">
               <input type="reset" name="Clear">
             </form>
