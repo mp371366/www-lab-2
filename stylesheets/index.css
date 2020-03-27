@@ -165,10 +165,20 @@ img.plane {
 ul.passengers-list {
   width: 50%;
   margin: auto;
+  list-style: none;
 }
 
 ul.passengers-list>li {
   text-align: left;
+  padding: 2px;
+}
+
+ul.passengers-list>li:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+ul.passengers-list>li:nth-child(odd) {
+  background-color: #cccccc;
 }
 
 dl.airplane-description-list {
