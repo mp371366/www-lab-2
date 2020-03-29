@@ -320,3 +320,21 @@ section.flight-reservation label {
     margin: auto;
   }
 }
+
+div.reservation-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background: gray;
+  background-color: rgba(120, 120, 120, 0.5);
+}
+
+section.reservation-modal-section {
+  background-color: white;
+  width: 50vw;
+  height: 50vh;
+  margin: 25vh auto;
+  border: 2px black solid;
+}
