@@ -18,19 +18,21 @@ header.page-header>h1 {
 }
 
 div.page-container {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: 200px 15px calc(75% - 172.5px) 15px calc(25% - 57.5px);
+  grid-template-rows: auto;
+  grid-template-areas: "menu . main . problems";
 }
 
 aside.menu {
   text-align: left;
   font-family: 'Times New Roman', Times, serif;
-  width: 20%;
-  padding-left: 5px;
+  width: 100%;
+  padding: 5px;
   background-color: #1c1e21;
   color: rgb(138, 141, 145);
+  box-sizing: border-box;
+  grid-area: menu;
 }
 
 aside.menu ul {
@@ -46,7 +48,8 @@ aside.menu a:link {
 }
 
 aside.problems {
-  width: 20%;
+  grid-area: problems;
+  width: 100%;
   text-align: left;
   background-color: mediumaquamarine;
 }
@@ -78,7 +81,8 @@ li.small-delay-flight {
 }
 
 main.main-content {
-  width: 60%;
+  grid-area: main;
+  width: 100%;
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 67px);
@@ -222,7 +226,6 @@ footer.main-footer {
   font-family: sans-serif;
   font-size: 30px;
   width: 100%;
-  margin: 20px 0px 0px 0px;
   padding: 5px 0px;
 }
 
@@ -254,11 +257,9 @@ section.flight-reservation label {
 }
 
 @media screen and (max-width: 700px) {
-  main.main-content {
-    width: 100%;
-  }
-  aside.problems {
-    width: 100%;
+  div.page-container {
+    grid-template-columns: 100%;
+    grid-template-areas: "menu" "main" "problems";
   }
   img.city-photo {
     display: none;
@@ -266,11 +267,9 @@ section.flight-reservation label {
 }
 
 @media screen and (min-width: 701px) and (max-width: 1024px) {
-  main.main-content {
-    width: 70%;
-  }
-  aside.problems {
-    width: 30%;
+  div.page-container {
+    grid-template-columns: calc(75% - 11.5px) 15px calc(25% - 3.5px);
+    grid-template-areas: "menu menu menu" "main . problems";
   }
 }
 
