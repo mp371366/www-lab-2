@@ -315,8 +315,6 @@ section.flight-reservation label {
   }
 }
 
-@media screen and (min-width: 701px) and (max-width: 1024px) {}
-
 @media screen and (min-width: 3000px) {
   body {
     width: 3000px;
