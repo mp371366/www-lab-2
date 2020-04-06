@@ -126,45 +126,6 @@
             </tbody>
           </table>
         </section>
-        <section id="reservation" class="flight-reservation">
-          <h2>Flight reservation form</h2>
-          <form>
-            <div>
-              <label for="departure">Departure:</label>
-              <select id="departure" name="departure" required>
-                  <option value="" selected disabled hidden>Choose departure</option>
-                  <option value="warsaw">Warsaw</option>
-                  <option value="moscow">Moscow</option>
-                  <option value="berlin">Berlin</option>
-                  <option value="london">London</option>
-                </select>
-            </div>
-            <div>
-              <label for="destination">Destination:</label>
-              <select id="destination" name="destination" required>
-                <option value="" selected disabled hidden>Choose destination</option>
-                <option value="warsaw">Warsaw</option>
-                <option value="moscow">Moscow</option>
-                <option value="berlin">Berlin</option>
-                <option value="london">London</option>
-              </select>
-            </div>
-            <div>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-              <label for="surname">Surname: </label>
-              <input type="text" id="surname" name="surname" required>
-            </div>
-            <div>
-              <label for="date">Date:</label>
-              <input type="date" id="date" name="date" required>
-            </div>
-            <input type="submit" name="Submit">
-            <input type="reset" name="Clear">
-          </form>
-        </section>
       </div>
       <footer class="main-footer">
         Mateusz Pyszczek
@@ -200,6 +161,45 @@
           <i>Thu 04/14/20 10:00AM</i>, 20 mins delay
         </li>
       </ul>
+      <section id="reservation" class="flight-reservation">
+        <h2>Flight reservation form</h2>
+        <form>
+          <div>
+            <label for="departure">Departure:</label>
+            <select id="departure" name="departure" required>
+              <option value="" selected disabled hidden>Choose departure</option>
+              <option value="warsaw">Warsaw</option>
+              <option value="moscow">Moscow</option>
+              <option value="berlin">Berlin</option>
+              <option value="london">London</option>
+            </select>
+          </div>
+          <div>
+            <label for="destination">Destination:</label>
+            <select id="destination" name="destination" required>
+              <option value="" selected disabled hidden>Choose destination</option>
+              <option value="warsaw">Warsaw</option>
+              <option value="moscow">Moscow</option>
+              <option value="berlin">Berlin</option>
+              <option value="london">London</option>
+            </select>
+          </div>
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label for="surname">Surname: </label>
+            <input type="text" id="surname" name="surname" required>
+          </div>
+          <div>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <input type="submit" name="Submit">
+          <input type="reset" name="Clear">
+        </form>
+      </section>
     </aside>
   </div>
   <div class="reservation-modal">
