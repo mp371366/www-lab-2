@@ -19,9 +19,10 @@ header.page-header>h1 {
 
 div.page-container {
   display: grid;
-  grid-template-columns: 200px 15px calc(75% - 172.5px) 15px calc(25% - 57.5px);
+  grid-template-columns: 200px calc(75% - 172.5px) calc(25% - 57.5px);
   grid-template-rows: auto;
-  grid-template-areas: "menu . main . problems" "footer footer footer footer footer";
+  grid-template-areas: "menu main problems" "footer footer footer";
+  grid-column-gap: 15px;
 }
 
 aside.menu {
@@ -272,8 +273,8 @@ section.flight-reservation label {
 
 @media screen and (min-width: 701px) and (max-width: 1024px) {
   div.page-container {
-    grid-template-columns: calc(75% - 11.5px) 15px calc(25% - 3.5px);
-    grid-template-areas: "menu menu menu" "main . problems" "footer footer footer";
+    grid-template-columns: calc(75% - 11.5px) calc(25% - 3.5px);
+    grid-template-areas: "menu menu" "main problems" "footer footer";
   }
 }
 
