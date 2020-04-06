@@ -21,7 +21,7 @@ div.page-container {
   display: grid;
   grid-template-columns: 200px 15px calc(75% - 172.5px) 15px calc(25% - 57.5px);
   grid-template-rows: auto;
-  grid-template-areas: "menu . main . problems";
+  grid-template-areas: "menu . main . problems" "footer footer footer footer footer";
 }
 
 aside.menu {
@@ -85,7 +85,7 @@ main.main-content {
   width: 100%;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 67px);
+  min-height: calc(100vh - 111px);
   justify-content: space-between;
 }
 
@@ -221,6 +221,7 @@ dl.airplane-description-list>dd {
 }
 
 footer.main-footer {
+  grid-area: footer;
   background-color: aliceblue;
   color: green;
   font-family: sans-serif;
@@ -259,17 +260,20 @@ section.flight-reservation label {
 @media screen and (max-width: 700px) {
   div.page-container {
     grid-template-columns: 100%;
-    grid-template-areas: "menu" "main" "problems";
+    grid-template-areas: "menu" "main" "problems" "footer";
   }
   img.city-photo {
     display: none;
+  }
+  main.main-content {
+    min-height: 0px;
   }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1024px) {
   div.page-container {
     grid-template-columns: calc(75% - 11.5px) 15px calc(25% - 3.5px);
-    grid-template-areas: "menu menu menu" "main . problems";
+    grid-template-areas: "menu menu menu" "main . problems" "footer footer footer";
   }
 }
 
