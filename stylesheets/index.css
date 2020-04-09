@@ -53,6 +53,9 @@ aside.problems {
   width: 100%;
   text-align: left;
   background-color: mediumaquamarine;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 aside.problems>h1 {
@@ -60,12 +63,12 @@ aside.problems>h1 {
   margin: 5px;
 }
 
-aside.problems>ul {
+ul.problems-list {
   padding-inline-start: 0;
   list-style: none;
 }
 
-aside.problems>ul>li {
+ul.problems-list>li {
   padding: 5px;
 }
 
@@ -334,6 +337,11 @@ div.reservation-modal {
   top: 0px;
   background: gray;
   background-color: rgba(120, 120, 120, 0.9);
+  visibility: hidden;
+}
+
+div.reservation-modal.active {
+  visibility: visible;
 }
 
 section.reservation-modal-section {
