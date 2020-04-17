@@ -12,5 +12,5 @@ for (const passenger of passengers) {
 if (passengerWithBiggestId !== undefined) {
   console.log(`Passenger with biggsest id: ${passengerWithBiggestId.innerText}.`);
 } else {
-    console.log('There is no passenger on list.');
+  console.log('There is no passenger on list.');
 }
