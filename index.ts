@@ -10,3 +10,7 @@ delayHeader.innerText = delayHeader.innerText.toUpperCase();
 let newFooer = document.createElement('p');
 newFooer.innerText = 'All rights reserved.';
 document.querySelector('body')?.appendChild(newFooer);
+
+setTimeout(() => {
+  console.log('At last.');
+}, 2000);
