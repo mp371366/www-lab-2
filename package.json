@@ -1,0 +1,21 @@
+{
+  "name": "www-lab-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "build": "tsc --build tsconfig.json",
+    "lint": "tslint *.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mp371366/www-lab-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mp371366/www-lab-2/issues"
+  },
+  "homepage": "https://github.com/mp371366/www-lab-2#readme"
+}
