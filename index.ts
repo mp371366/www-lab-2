@@ -51,3 +51,25 @@ fetch(repoUrl)
     document.querySelector('body')?.appendChild(img);
   })
   .catch(console.error);
+
+function fib(x: number): number {
+  return x < 2 ? x : fib(x - 1) + fib(x - 2);
+}
+
+let i = 0;
+const delayMenu = document.querySelector('.problems') as HTMLElement;
+delayMenu.onclick = async () => {
+  i++;
+  console.log(fib(10 * i));
+
+  const currentColor = window.getComputedStyle(delayMenu).getPropertyValue('background-color');
+  const [, ...colorsAsText] = /rgb\((\d+),[^0-9]*(\d+),[^0-9]*(\d+)\)/.exec(currentColor) ?? [];
+  const [red, green, blue] = colorsAsText.map((colorAsText) => (parseInt(colorAsText, 10) + 0x20) % 256);
+
+  delayMenu.style.backgroundColor = `rgb(${red},${green},${blue})`;
+};
+
+const reservationForm  = document.querySelector('#reservation') as HTMLElement;
+reservationForm.onclick = (event: MouseEvent) => {
+  event.stopPropagation();
+};
