@@ -38,3 +38,16 @@ async function rainbow(el: HTMLElement) {
 
 rainbow(newFooter);
 
+const repoUrl = 'https://api.github.com/repos/Microsoft/TypeScript/commits';
+
+fetch(repoUrl)
+  .then((response) => response.json())
+  .then((data) => data[0].author.avatar_url)
+  .then(fetch)
+  .then((response) => response.blob())
+  .then((blob) => {
+    const img = document.createElement('img');
+    img.src = URL.createObjectURL(blob);
+    document.querySelector('body')?.appendChild(img);
+  })
+  .catch(console.error);
