@@ -7,10 +7,34 @@ console.log(nameInput.value);
 let delayHeader = document.querySelector('aside.problems h2') as HTMLElement;
 delayHeader.innerText = delayHeader.innerText.toUpperCase();
 
-let newFooer = document.createElement('p');
-newFooer.innerText = 'All rights reserved.';
-document.querySelector('body')?.appendChild(newFooer);
+let newFooter = document.createElement('p');
+newFooter.innerText = 'All rights reserved.';
+document.querySelector('body')?.appendChild(newFooter);
 
 setTimeout(() => {
   console.log('At last.');
 }, 2000);
+
+function delay(time: number, handler: () => void): Promise<void> {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      handler();
+      resolve();
+    }, time);
+  })
+}
+
+async function rainbow(el: HTMLElement) {
+  const time = 1000;
+  function setBackgroundColorAndWait(color: string): Promise<void> {
+    return delay(time, () => el.style.backgroundColor = color);
+  }
+
+  const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple'];
+  for (const color of colors) {
+    await setBackgroundColorAndWait(color);
+  }
+}
+
+rainbow(newFooter);
+
