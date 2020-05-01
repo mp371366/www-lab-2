@@ -255,10 +255,57 @@ section.flight-reservation input[type=reset] {
   width: 80px;
 }
 
+input[type="submit"]:disabled {
+  color: rgb(207, 207, 207);
+}
+
 section.flight-reservation label {
   width: 25%;
   display: inline-block;
   text-align: right;
+}
+
+div.reservation-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background: gray;
+  background-color: rgba(120, 120, 120, 0.9);
+  visibility: hidden;
+}
+
+section.reservation-modal-section {
+  background-color: white;
+  width: 50vw;
+  height: 50vh;
+  margin: 25vh auto;
+  border: 2px black solid;
+}
+
+section.reservation-modal-section>header {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 70px;
+}
+
+section.reservation-modal-section>header>h2 {
+  width: 90%;
+}
+
+section.reservation-modal-section>header>.close {
+  width: 10%;
+  text-align: center;
+  padding-top: 28px;
+  box-sizing: content-box;
+  background-color: gray;
+}
+
+section.reservation-modal-section>header>.close:hover {
+  background-color: rgb(73, 73, 73);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 700px) {
@@ -272,12 +319,20 @@ section.flight-reservation label {
   main.main-content {
     min-height: 0px;
   }
+  section.reservation-modal-section {
+    width: 100vw;
+    height: 80vh;
+    margin: 5vh auto;
+  }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1024px) {
   div.page-container {
     grid-template-columns: calc(75% - 11.5px) calc(25% - 3.5px);
     grid-template-areas: "menu menu" "main problems" "footer footer";
+  }
+  section.reservation-modal-section {
+    width: 75vw;
   }
 }
 
@@ -327,27 +382,8 @@ section.flight-reservation label {
     width: 3000px;
     margin: auto;
   }
-}
 
-div.reservation-modal {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  left: 0px;
-  top: 0px;
-  background: gray;
-  background-color: rgba(120, 120, 120, 0.9);
-  visibility: hidden;
-}
-
-div.reservation-modal.active {
-  visibility: visible;
-}
-
-section.reservation-modal-section {
-  background-color: white;
-  width: 50vw;
-  height: 50vh;
-  margin: 25vh auto;
-  border: 2px black solid;
+  section.reservation-modal-section {
+    width: 1500px;
+  }
 }
