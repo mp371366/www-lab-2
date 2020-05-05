@@ -1,13 +1,12 @@
 {
   "defaultSeverity": "error",
   "extends": [
-      "tslint:recommended"
+    "tslint:recommended"
   ],
   "jsRules": {},
   "rules": {
-      "no-console": false,
-      "indent": true,
-      "no-use-before-declare": true
+    "no-console": false,
+    "indent": true
   },
   "rulesDirectory": []
 }
