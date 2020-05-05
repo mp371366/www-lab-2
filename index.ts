@@ -38,40 +38,40 @@ function checkForm() {
 
 checkForm();
 
-let nameInput = document.querySelector('#name') as HTMLInputElement;
+const nameInput = document.querySelector('#name') as HTMLInputElement;
 nameInput.onchange = () => {
   passengerName = nameInput.value;
   checkForm();
 };
 
-let surnameInput = document.querySelector('#surname') as HTMLInputElement;
+const surnameInput = document.querySelector('#surname') as HTMLInputElement;
 surnameInput.onchange = () => {
   passengerSurname = surnameInput.value;
   checkForm();
 };
 
-let departureInput = document.querySelector('#departure') as HTMLInputElement;
+const departureInput = document.querySelector('#departure') as HTMLInputElement;
 departureInput.onchange = () => {
   departure = departureInput.value;
   checkForm();
 };
 
-let destinationInput = document.querySelector('#destination') as HTMLInputElement;
+const destinationInput = document.querySelector('#destination') as HTMLInputElement;
 destinationInput.onchange = () => {
   destination = destinationInput.value;
   checkForm();
 };
 
-let dateInput = document.querySelector('#date') as HTMLInputElement;
+const dateInput = document.querySelector('#date') as HTMLInputElement;
 dateInput.onchange = () => {
   date = new Date(dateInput.value);
   checkForm();
 };
 
-let modal = document.querySelector('.reservation-modal') as HTMLElement;
+const modal = document.querySelector('.reservation-modal') as HTMLElement;
 modal.style.visibility = 'hidden';
 
-let form = document.querySelector('form') as HTMLFormElement;
+const form = document.querySelector('form') as HTMLFormElement;
 form.onsubmit = (ev: Event) => {
   ev.preventDefault();
   form.reset();
