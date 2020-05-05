@@ -1,4 +1,4 @@
-const reservationForm  = document.querySelector('#reservation') as HTMLFormElement;
+const reservationForm = document.querySelector('#reservation') as HTMLFormElement;
 reservationForm.onclick = (event: MouseEvent) => {
   event.stopPropagation();
 };
@@ -77,25 +77,25 @@ form.onsubmit = (ev: Event) => {
   form.reset();
 
   function makeInfo(info: string): HTMLElement {
-    let element = document.createElement('p');
+    const element = document.createElement('p');
     element.innerText = info;
     return element;
   }
 
-  let nameInfo = makeInfo(`Name: ${passengerName}`);
-  let surnameInfo = makeInfo(`Surname: ${passengerSurname}`);
-  let departureInfo = makeInfo(`Departure: ${departure}`);
-  let destinationInfo = makeInfo(`Destination: ${destination}`);
-  let dateInfo = makeInfo(`Date: ${date?.toLocaleDateString()}`);
+  const nameInfo = makeInfo(`Name: ${passengerName}`);
+  const surnameInfo = makeInfo(`Surname: ${passengerSurname}`);
+  const departureInfo = makeInfo(`Departure: ${departure}`);
+  const destinationInfo = makeInfo(`Destination: ${destination}`);
+  const dateInfo = makeInfo(`Date: ${date?.toLocaleDateString()}`);
 
-  let modalBody = document.querySelector('.reservation-modal-data') as HTMLElement;
+  const modalBody = document.querySelector('.reservation-modal-data') as HTMLElement;
   modalBody.innerHTML = '';
   modalBody.append(nameInfo, surnameInfo, departureInfo, destinationInfo, dateInfo);
 
   modal.style.visibility = 'visible';
 };
 
-let closeModal = document.querySelector('.close') as HTMLElement;
+const closeModal = document.querySelector('.close') as HTMLElement;
 closeModal.onclick = () => {
   modal.style.visibility = 'hidden';
 };
