@@ -79,6 +79,8 @@ function init() {
     modal.style.visibility = 'visible';
   };
 
+  form.onreset = clearForm;
+
   closeModal.onclick = () => {
     modal.style.visibility = 'hidden';
     clearForm();
