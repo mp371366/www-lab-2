@@ -60,8 +60,8 @@ function init() {
   form.onsubmit = (ev: Event) => {
     ev.preventDefault();
 
-    function makeInfo(info: string): HTMLElement {
-      const element = document.createElement('p');
+    function makeInfo(info: string, as: string = 'p'): HTMLElement {
+      const element = document.createElement(as);
       element.innerText = info;
       return element;
     }
