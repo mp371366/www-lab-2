@@ -15,13 +15,30 @@ let departure: string | null = null;
 let destination: string | null = null;
 let date: Date | null = null;
 
+function getDateString(d: Date) {
+  return d.toISOString().substr(0, 10);
+}
+
+function compareByDate(date1: Date, date2: Date): number {
+  const dateString1 = getDateString(date1);
+  const dateString2 = getDateString(date2);
+
+  if (dateString1 < dateString2) {
+    return -1;
+  } else if (dateString1 === dateString2) {
+    return 0;
+  } else {
+    return 1;
+  }
+}
+
 function checkForm() {
   submitButton.disabled
     = (passengerName ?? '') === ''
     || (passengerSurname ?? '') === ''
     || (departure ?? '') === ''
     || (destination ?? '') === ''
-    || date === null || date < new Date();
+    || date === null || compareByDate(date, new Date()) < 0;
 }
 
 function clearForm() {
@@ -70,7 +87,7 @@ function init() {
     const surnameInfo = makeInfo(`Surname: ${passengerSurname}`);
     const departureInfo = makeInfo(`Departure: ${departure}`);
     const destinationInfo = makeInfo(`Destination: ${destination}`);
-    const dateInfo = makeInfo(`Date: ${date?.toLocaleDateString()}`);
+    const dateInfo = makeInfo(`Date: ${date && getDateString(date)}`);
 
     const modalBody = document.querySelector('.reservation-modal-data') as HTMLElement;
     modalBody.innerHTML = '';
