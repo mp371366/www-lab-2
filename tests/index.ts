@@ -35,6 +35,7 @@ describe('Submit form test', function () {
     expect(await driver.find('.reservation-modal').isDisplayed()).to.be.false;
     await driver.find('input[type="submit"]').doClick();
     expect(await driver.find('.reservation-modal').isDisplayed()).to.be.true;
+
     const reservationModalData = await driver.find('.reservation-modal-data');
     const [nameInfo, surnameInfo, departureInfo, destinationInfo, dateInfo] = await reservationModalData.findAll('p');
     async function checkInfo(element: WebElement, label: any, value: any) {
@@ -45,6 +46,10 @@ describe('Submit form test', function () {
     await checkInfo(departureInfo, 'Departure', formData.departure);
     await checkInfo(destinationInfo, 'Destination', formData.destination);
     await checkInfo(dateInfo, 'Date', formData.date);
+
+    expect(await driver.find('a[href="./index.html"]').doClick().then(() => true).catch(() => false)).to.be.false;
+    await driver.find('div.close').click();
+    expect(await driver.find('a[href="./index.html"]').doClick().then(() => true).catch(() => false)).to.be.true;
   });
 
   it('should disable submit button after form reset', async function () {
